@@ -45,3 +45,12 @@ if van_ot_hianyzas:
 else:
     print("Nem volt olyan hét, amikor ötnél kevesebb hiányzás volt.")
 
+# 4. Melyik héten volt a legtöbb hiányzás?
+def maximum_kivalasztas(hianyzasok):
+    max_index=0
+    for index in range(1,len(hianyzasok)):
+        if hianyzasok[max_index]<hianyzasok[index]:
+            max_index=index
+    return max_index
+print(maximum_kivalasztas(hianyzasok))
+print(f"A legtöbb hiányzás a {maximum_kivalasztas(hianyzasok)+1}. héten volt ({sum(hianyzasok[2])} óra)") 
