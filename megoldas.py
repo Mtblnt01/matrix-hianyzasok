@@ -20,7 +20,14 @@ for het in hianyzasok:
     osszeg+=sum(het) 
 print(f"1.feladat: {osszeg} óra hiányzás volt összesen")
 
-
-# 3. Volt-e olyan hét, amikor ötnél kevesebb hiányzás volt
-# 3. feladat: Volt olyan hét, amikor ötnél kevesebb hiányzó volt
-print("3. feladat: Volt olyan hét, amikor ötnél kevesebb hiányzó volt")
+# 2. Volt-e olyan hét, amikor nem volt hiányzó?
+def eldontes(hianyzasok):
+    i=0
+    while i<len(hianyzasok[i]) and not(sum(hianyzasok[i])>=1):
+        i+=1
+    van=i<len(hianyzasok[i])
+    return van
+if eldontes(hianyzasok):
+    print("2.Feladat: Nem volt olyan hét, amikor nem volt hiányzó")
+else:
+    print("Volt olyan hét, amikor nem volt hiányzó")
