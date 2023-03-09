@@ -1,7 +1,6 @@
-#0.feladat A hianyzasok.txt beolvasa listaban listakba
-
+#0. feladat: A hianyzasok.txt beolvasása listában listákba
 hianyzasok=[]
-with open("./adatok/hianyzasok.txt","r",encoding="UTF-8") as fm:
+with open("./adatok/hianyzasok.txt","r",encoding="utf-8") as fm:
     for sor in fm:
         seged_lista=sor.strip().split(",")
         # l=[]
@@ -21,9 +20,7 @@ for het in hianyzasok:
     osszeg+=sum(het) 
 print(f"1.feladat: {osszeg} óra hiányzás volt összesen")
 
+
 # 3. Volt-e olyan hét, amikor ötnél kevesebb hiányzás volt
 # 3. feladat: Volt olyan hét, amikor ötnél kevesebb hiányzó volt
-
-
-
-print(f"3. feladat: Volt olyan hét, amikor ötnél kevesebb hiányzó volt")
+print("3. feladat: Volt olyan hét, amikor ötnél kevesebb hiányzó volt")
